@@ -1,18 +1,15 @@
 import GifGridItem from 'components/GifGridItem'
-import { GetGifs } from 'helpers/getGifs'
+import { useFetchGifs } from 'hooks/useFetchGifs'
 import PropTypes from 'prop-types'
-import { useEffect, useState } from 'react'
 
 const GifGrid = ({ category }) => {
-  const [gifs, setGifs] = useState([])
-
-  useEffect(() => {
-    GetGifs({ category })
-      .then(setGifs)
-  }, [category])
+  const { gifs, loading } = useFetchGifs({ category })
 
   return <>
     <h2>{category}</h2>
+
+    { loading && <p>Loading...</p> }
+    
     <div>
       {
         gifs.map(gif => 

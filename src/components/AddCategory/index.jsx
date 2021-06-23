@@ -8,7 +8,10 @@ const CreateCategory = ({ setCategories }) => {
 
   const handleAdd = e => {
     e.preventDefault()
-    setCategories(lastCategories => lastCategories.concat(newCategory))
+
+    newCategory.trim() &&
+      setCategories(lastCategories => [newCategory, ...lastCategories])
+      
     setNewCategory('')
   }
 

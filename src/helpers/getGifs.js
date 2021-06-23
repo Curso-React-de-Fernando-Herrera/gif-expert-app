@@ -1,6 +1,6 @@
 import { GetGifsService } from "services/getGifs"
 
-export const GetGifs = async({ category }) => {
+export const GetGifs = async({ category = '' } = {}) => {
   const gifs = await GetGifsService({ category })
 
   // get all data and below filter

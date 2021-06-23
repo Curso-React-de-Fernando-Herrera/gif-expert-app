@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<GifGrid /> component should be render the loading at first time 1`] = `
+<Fragment>
+  <h2>
+    Dragon Ball
+  </h2>
+  <p>
+    Loading...
+  </p>
+  <div />
+</Fragment>
+`;
+
+exports[`<GifGrid /> component should be return gif data 1`] = `
+<Fragment>
+  <h2>
+    Dragon Ball
+  </h2>
+  <div>
+    <GifGridItem
+      key="abc"
+      title="examle"
+      url="https://localhost/example.png"
+      username="pepito"
+    />
+  </div>
+</Fragment>
+`;
