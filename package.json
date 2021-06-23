@@ -16,7 +16,7 @@
     "start": "react-scripts start",
     "commit": "git add . && cz && git push origin main",
     "build": "react-scripts build",
-    "test": "react-scripts test --testPathPattern=/src\/__tests__/",
+    "test": "react-scripts test --testPathPattern=/src/__tests__/",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -43,6 +43,7 @@
     }
   },
   "devDependencies": {
+    "@testing-library/react-hooks": "^7.0.0",
     "@wojtekmaj/enzyme-adapter-react-17": "^0.6.2",
     "enzyme-to-json": "^3.6.2"
   }

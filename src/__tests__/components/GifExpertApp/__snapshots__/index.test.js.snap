@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<GifExpertApp /> component should be rendered 1`] = `
+<div>
+  <header>
+    <h2>
+      GifExpertApp
+    </h2>
+    <CreateCategory
+      setCategories={[Function]}
+    />
+    <hr />
+  </header>
+  <ol>
+    <GifGrid
+      category="Naruto"
+      key="Naruto"
+    />
+  </ol>
+</div>
+`;

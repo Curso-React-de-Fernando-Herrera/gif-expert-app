@@ -1,12 +1,11 @@
 import { useState } from "react"
+import PropTypes from 'prop-types'
 
 import AddCategory from 'components/AddCategory'
 import GifGrid from "components/GifGrid"
 
-const GifExpertApp = () => {
-  const initialCategories = ['Naruto']
-
-  const [categories, setCategories] = useState(initialCategories)
+const GifExpertApp = ({ initialCategory = ['Naruto'] }) => {
+  const [categories, setCategories] = useState(initialCategory)
 
   return <div>
     <header>
@@ -27,6 +26,10 @@ const GifExpertApp = () => {
       }
     </ol>
   </div>
+}
+
+GifExpertApp.porpTypes = {
+  initialCategory: PropTypes.arrayOf(PropTypes.string)
 }
 
 export default GifExpertApp
